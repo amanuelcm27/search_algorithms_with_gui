@@ -174,6 +174,8 @@ def gui_app():
             messagebox.showerror("No Path", "No path could be found!")
     root = tk.Tk()
     root.title("Graph Search Visualizer")
+    root.geometry("400x300")  # Set the window size to 400x300 pixels
+    root.resizable(True, True)
     tk.Label(root, text="Select Algorithm:").pack()
     algo_var = tk.StringVar(value="BFS")
     algo_menu = tk.OptionMenu(root, algo_var, "BFS", "DFS", "DLS", "IDDFS", "UCS", "BDS")
